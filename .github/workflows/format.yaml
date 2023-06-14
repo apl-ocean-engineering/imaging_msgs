@@ -1,4 +1,4 @@
-name: Validate formatting (pre-commit)
+name: Validate formatting with pre-commit
 
 on:
   pull_request:
