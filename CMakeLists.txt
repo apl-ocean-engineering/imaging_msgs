@@ -49,6 +49,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   ImagingMetadata.msg
+  HdrImagingMetadata.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs)
