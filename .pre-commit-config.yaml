@@ -17,10 +17,3 @@ repos:
     -   id: clang-format
         # Respect .clang-format if it exists, otherwise use Google
         args: ["--fallback-style=Google"]
-#
-# Uncomment the following to enable cpplint
-#
-#-   repo: https://gitlab.com/daverona/pre-commit/cpp
-#    rev: 0.8.0
-#    hooks:
-#    -   id: cpplint
