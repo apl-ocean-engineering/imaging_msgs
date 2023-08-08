@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>imaging_msgs</name>
   <version>0.0.1</version>
-  <description>The imaging_msgs package</description>
+  <description>Contains messages which describe the imaging process.</description>
 
-  <!-- One maintainer tag required, multiple allowed, one person per tag -->
-  <!-- Example:  -->
-  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="amarburg@uw.edu">Aaron Marburg</maintainer>
   <author email="amarburg@uw.edu">Aaron Marburg</author>
 
   <license>BSD 3-Clause</license>
   <url type="website">https://github.com/apl-ocean-engineering/imaging_msgs</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>colcon</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
 
-  <build_depend>message_generation</build_depend>
-  <build_depend>std_msgs</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
 
-  <build_export_depend>std_msgs</build_export_depend>
+  <depend>std_msgs</depend>
 
-  <exec_depend>std_msgs</exec_depend>
-  <exec_depend>message_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 
 </package>

@@ -1,20 +1,19 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.3)
 project(imaging_msgs)
 
-find_package(catkin REQUIRED COMPONENTS
-  message_generation
-  std_msgs
-)
+set(CMAKE_CXX_STANDARD 14)
 
-## Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  ImagingMetadata.msg
-  HdrImagingMetadata.msg
-)
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 
-generate_messages(DEPENDENCIES std_msgs)
 
-catkin_package(
- CATKIN_DEPENDS message_runtime std_msgs
-)
+ rosidl_generate_interfaces(${PROJECT_NAME}
+                            msg/HdrImagingMetadata.msg
+                            msg/ImagingMetadata.msg
+                          DEPENDENCIES
+                            std_msgs )
+
+ ament_export_dependencies(rosidl_default_runtime)
+
+ ament_package()
