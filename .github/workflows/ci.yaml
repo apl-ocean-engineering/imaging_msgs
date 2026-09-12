@@ -26,6 +26,6 @@ jobs:
     #  CCACHE_DIR: "${{ github.workspace }}/.ccache" # directory for ccache (and how we enable ccache in industrial_ci)
     steps:
       - uses: actions/checkout@v3 # clone target repository
-      - uses: 'ros-industrial/industrial_ci@master' 
-        env: # 
+      - uses: 'ros-industrial/industrial_ci@master'
+        env: #
           ROS_DISTRO: ${{ matrix.ROS_DISTRO }}
